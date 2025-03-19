@@ -1,0 +1,7 @@
+.news-box {
+    cursor: pointer;
+    width: 700px;
+    height: 400px;
+    margin: 0 20px;
+    background-image: url(https://placehold.co/700x400?text=Mobility+News);
+}

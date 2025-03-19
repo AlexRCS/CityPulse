@@ -1,0 +1,21 @@
+.swiper-news {
+  width: 100%;
+  height: 300px;
+  background-color: transparent;
+}
+
+.swiper-slide-news {
+  text-align: center;
+  font-size: 18px;
+  background-image: url(https://placehold.co/300x300?text=City+News);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide-news img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,31 @@
+.profile-nav{
+    width: max-content;
+    display: flex;
+    gap: 5px;
+}
+
+.profile.log {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: max-content;
+    
+    &:hover {
+        color: #6b6b6b;
+    }
+}
+
+.user-options {
+    font-size: 24px;
+    margin: 0 5px 0 10px;
+}
+
+.fa-play{
+    font-size: 16px;
+    transform: rotate(90deg);
+    transition: transform ease 0.5s;
+}
+.fa-play.open{
+    transform: rotate(0deg);
+}

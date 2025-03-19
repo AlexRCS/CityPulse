@@ -1,0 +1,60 @@
+.profile-selection {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    background-color: #efefef;
+    width: max-content;
+    right: 5px;
+    border: hidden;
+    box-shadow: 0 7px 20px -3px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+   
+    &{
+        :hover {
+            color: #6b6b6b;
+        }
+    }
+}
+
+
+
+.profile-selection.open {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 5px 15px;
+}
+
+.profile-selection button {
+    display: none;
+}
+
+.profile-selection.open button {
+    display: block;
+    background-color: transparent;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all ease 0.2s;
+    border: none;
+}
+
+.profile-selection.open button,
+.profile-item.open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-item.open {
+    margin: 10px 5px 20px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all ease 0.2s;
+    cursor: pointer;
+}

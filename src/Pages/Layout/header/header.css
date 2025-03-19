@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    width: 99vw;
+    height: 250px;
+    background-image: url(https://placehold.co/600x400?text=Header+Banner);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.header-img{
+    position: absolute;
+    width: 99%;
+    object-fit: cover;
+    z-index: 0;
+}

@@ -1,0 +1,70 @@
+article {
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 88vw;
+  min-height: max-content;
+  padding: 10px;
+}
+
+.widgets {
+  display: flex;
+  width: 100%;
+}
+
+.climatics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city-view {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-height: 100%;
+  margin: 0 20px;
+  height: min-content;
+}
+
+.news-swiper {
+  width: 88vw;
+  padding: 20px;
+}
+
+.home-transports {
+  display: flex;
+  justify-content: center;
+  width: 88vw;
+  margin-top: 20px;
+}
+
+.table-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.table-container select {
+  margin: 5px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table thead {
+  background-color: #4285f4;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}

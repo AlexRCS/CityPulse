@@ -1,0 +1,16 @@
+.nav-btn {
+    background-color: #f0f8ff;
+    height: 40px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    font-size: 20px;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px, 5px;
+    height: 60px;
+}

@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    align-items: center;
+    width: 99vw;
+    height: 50px;
+    padding-right: 1vw;
+    background-color: #f0f8ff;
+}
+
+.buttons-area {
+    justify-self: flex-end;
+    width: 100vw;
+    height: 50px;
+    background-color: #f0f8ff;
+}

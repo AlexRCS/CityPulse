@@ -1,0 +1,29 @@
+.table-container {
+    text-align: center;
+    margin: 0 10px;
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .table-container select {
+    margin: 5px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .table thead {
+    background-color: #4285f4;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
