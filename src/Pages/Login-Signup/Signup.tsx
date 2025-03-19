@@ -5,9 +5,9 @@ import { z } from 'zod'
 import { useNavigate } from 'react-router-dom'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 import 'react-phone-number-input/style.css'
-import { useUserDataContext } from '../../Services/user/user-obj.jsx'
+import { useUserDataContext } from '../../Services/user/user-obj'
 
-import FormBody from '../Layout/form-body/form-body.jsx'
+import FormBody from '../Layout/form-body/form-body'
 import SubmitBtn from '../../Components/buttons/submit-button/submit-btn'
 
 import './Login-Signup.css'

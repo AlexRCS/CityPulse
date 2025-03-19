@@ -1,5 +1,5 @@
-import NavButton from "../../../Components/Buttons/nav-button/nav-buttons"
-import ProfileBtn from "../../../Components/Buttons/profile/profile-btn"
+import NavButton from "../../../Components/buttons/nav-button/nav-buttons"
+import ProfileBtn from "../../../Components/buttons/profile/profile-btn"
 import ProfileOptions from "../../../Components/modals/profile-options/profile-options"
 
 import './nav.css'
