@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../Home/Home.Jsx";
+import Home from "../Home/Home";
 import Mobility from "../Mobility/Mobility";
 import Tourism from "../Tourism/Tourism";
 import Services from "../Civil-Services/Services";
