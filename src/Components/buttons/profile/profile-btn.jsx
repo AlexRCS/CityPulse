@@ -17,7 +17,7 @@ function ProfileBtn() {
 
   return (
     <div className='profile-nav'>
-      <h4>{userData.name}</h4>
+      <h4>{userData ? userData.name : ''}</h4>
       <div ref={containerRef} >
         <button className="profile log" onClick={handleToggle}>
           <i className="fa-solid fa-user user-options" />

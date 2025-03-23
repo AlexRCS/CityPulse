@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const Weather = () => {
-  const API_KEY = 'e5ee9023ac3fd2738c439fdf5529b3c8';
+  const API_KEY = import.meta.env.VITE_AIR_CONTROL_KEY;
   const city = 'Ovar,PT';
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=pt`;
 

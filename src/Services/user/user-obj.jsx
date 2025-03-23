@@ -1,32 +1,41 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
-export const UserContext = createContext();
+const UserContext = createContext();
 
 export function UserDataProvider({ children }) {
   const [userData, setUserData] = useState(() => {
     const storedData = localStorage.getItem("userData");
-    return storedData ? JSON.parse(storedData) : {};
+    return storedData ? JSON.parse(storedData) : null;
   });
 
+  // Atualiza os dados do usuário conforme recebidos do backend
   const updateUserData = (data) => {
-    setUserData({
-      ...data,
-      id: Math.floor(Math.random() * 99999),
-    });
+    setUserData(data);
+  };
+
+  // Função para limpar os dados do usuário (ex: logout)
+  const clearUserData = () => {
+    setUserData(null);
+    localStorage.removeItem("userData");
   };
 
   useEffect(() => {
-    localStorage.setItem("userData", JSON.stringify(userData));
-    console.log('data do obj', userData);
+    if (userData) {
+      localStorage.setItem("userData", JSON.stringify(userData));
+    }
   }, [userData]);
 
   return (
-    <UserContext.Provider value={{ userData, updateUserData }}>
+    <UserContext.Provider value={{ userData, updateUserData, clearUserData }}>
       {children}
     </UserContext.Provider>
   );
 }
 
 export function useUserDataContext() {
-  return useContext(UserContext);
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("useUserDataContext must be used within a UserDataProvider");
+  }
+  return context;
 }

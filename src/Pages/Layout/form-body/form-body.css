@@ -1,10 +1,17 @@
-.form-header{
+.form-header {
     padding: 20px;
     background-color: #000000;
     color: #ffffff;
 }
 
+.content-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 0;
+}
 
-.form-header h1{
+.form-header h1 {
+    width: max-content;
     cursor: pointer;
 }

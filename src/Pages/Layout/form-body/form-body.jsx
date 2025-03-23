@@ -19,7 +19,7 @@ function FormBody({ children }) {
             <section className='form-header' onClick={handleNavigate}>
                 <h1>CityPulse</h1>
             </section>
-            <section>
+            <section className="content-body">
                 {formContentChild}
             </section>
             <Footer />

@@ -28,7 +28,7 @@ function ProfileOptions({ openState, setOpen, containerRef }) {
   return (
     <div ref={containerRef}>
       <ul className={`profile-selection ${openState}`}>
-        {userData.id > 0 ? (
+        {userData ? (
           <>
             <li>
               <button className={`profile-item ${openState}`} onClick={NavigateProfile}>

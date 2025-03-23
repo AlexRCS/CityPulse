@@ -1,13 +1,15 @@
+import { useState } from "react"
+import './edit-user-data-btn.css'
+import UserProfile from "../../../Pages/Profile/User-Profile"
+
+function EditUserDataBtn({handleEdit}) {
 
 
-function EditUserDataBtn() {
-
-    const handleEdit = () => {
-        
-    }
 
     return (
-        <button><i class="fa-solid fa-pen"></i></button>
+        <>
+            <button className="edit-btn" onClick={handleEdit}><i class="fa-solid fa-pen"></i></button>
+        </>
     )
 }
 
