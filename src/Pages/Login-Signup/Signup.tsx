@@ -49,29 +49,31 @@ function Signup() {
     })
 
     const onSubmit: SubmitHandler<FormField> = async (data) => {
-        const { confirmPassword, termsConfirm, ...rest } = data;
-        const payload = { ...rest };
+        const { confirmPassword, termsConfirm, ...rest } = data
+        const payload = { ...rest }
+
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://citypulse-server.onrender.com'
 
         try {
-            const response = await fetch('http://localhost:3001/Signup', {
+            const response = await fetch(`${apiUrl}/Signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
-            });
-            const result = await response.json();
+            })
+            const result = await response.json()
             if (response.ok) {
-                console.log('Usuário registrado:', result.user);
-                updateUserData(result.user);
-                navigate('/Login');
+                console.log('Usuário registrado:', result.user)
+                updateUserData(result.user)
+                navigate('/Login')
             } else {
-                console.error('Erro ao registrar:', result.error);
-                setErrorMessage(result.error);
+                console.error('Erro ao registrar:', result.error)
+                setErrorMessage(result.error)
             }
         } catch (error) {
-            console.error('Erro de conexão:', error);
-            setErrorMessage('Erro de conexão. Tente novamente mais tarde.');
+            console.error('Erro de conexão:', error)
+            setErrorMessage('Erro de conexão. Tente novamente mais tarde.')
         }
-    };
+    }
 
     return (
         <FormBody>

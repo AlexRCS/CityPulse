@@ -31,10 +31,10 @@ function Login() {
         navigate('/Signup')
     }
 
-
     const onSubmit: SubmitHandler<FormField> = async (data) => {
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://citypulse-server.onrender.com'
         try {
-            const response = await fetch('http://localhost:3001/Login', {
+            const response = await fetch(`${apiUrl}/Login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -42,7 +42,6 @@ function Login() {
             const result = await response.json()
             if (response.ok) {
                 console.log('Usuário autenticado:', result.user)
-
                 navigate('/')
             } else {
                 console.error('Erro no login:', result.error)
