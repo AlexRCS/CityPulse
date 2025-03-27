@@ -52,7 +52,7 @@ function Signup() {
         const { confirmPassword, termsConfirm, ...rest } = data
         const payload = { ...rest }
 
-        const apiUrl = process.env.REACT_APP_API_URL || 'https://citypulse-server.onrender.com'
+        const apiUrl = import.meta.env.VITE_API_URL
 
         try {
             const response = await fetch(`${apiUrl}/Signup`, {
@@ -60,14 +60,17 @@ function Signup() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
             })
-            const result = await response.json()
+
+            const responseText = await response.text()
+            const result = responseText ? JSON.parse(responseText) : {}
+
             if (response.ok) {
                 console.log('Usuário registrado:', result.user)
                 updateUserData(result.user)
                 navigate('/Login')
             } else {
                 console.error('Erro ao registrar:', result.error)
-                setErrorMessage(result.error)
+                setErrorMessage(result.error || 'Erro desconhecido')
             }
         } catch (error) {
             console.error('Erro de conexão:', error)

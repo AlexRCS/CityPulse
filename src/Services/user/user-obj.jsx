@@ -8,12 +8,10 @@ export function UserDataProvider({ children }) {
     return storedData ? JSON.parse(storedData) : null;
   });
 
-  // Atualiza os dados do usuário conforme recebidos do backend
   const updateUserData = (data) => {
     setUserData(data);
   };
 
-  // Função para limpar os dados do usuário (ex: logout)
   const clearUserData = () => {
     setUserData(null);
     localStorage.removeItem("userData");

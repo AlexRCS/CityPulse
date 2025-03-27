@@ -32,7 +32,8 @@ function Login() {
     }
 
     const onSubmit: SubmitHandler<FormField> = async (data) => {
-        const apiUrl = process.env.REACT_APP_API_URL || 'https://citypulse-server.onrender.com'
+        const apiUrl = import.meta.env.VITE_API_URL
+        
         try {
             const response = await fetch(`${apiUrl}/Login`, {
                 method: 'POST',
